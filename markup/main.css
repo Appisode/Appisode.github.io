@@ -50,6 +50,11 @@ body * {
 	border-radius: 20px;
 }
 
+#coffee {
+	width: 25%;
+	height: auto;
+}
+
 @media only screen and (min-width : 320px) and (max-width : 720px) {
 	#logo {
 		width: 80%;
@@ -57,5 +62,23 @@ body * {
 
 	#text {
 		width: 90%;
+	}
+
+	.portfolio-item {
+		width: 90%;
+		text-align: center;
+	}
+
+	.portfolio-image {
+		float: inherit;
+	}
+
+	.portfolio-text {
+		padding-left: 0;
+	}
+
+	#coffee {
+		width: 50%;
+		height: auto;
 	}
 }

@@ -4,6 +4,7 @@
 	<title>Appisode</title>
 	<link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css" />
 	<link href="markup/main.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<script src="markup/autolink.js"></script>
 	<script src="markup/formatter.js"></script>
 	<script src="markup/main.js"></script>
@@ -11,54 +12,49 @@
 <body>
 	<img id="logo" src="markup/header-logo.png" />
 	<div id="text">
+	replace play/# with https://play.google.com/store/apps/details?id=
+	snippet 1 begin
+		pause formatting
+		<!--
+		<div class="portfolio-item curvy">
+			<img src="portfolio/{{0}}" class="portfolio-image" />
+			<div class="portfolio-text">
+			-->
+	snippet 1 end
+	snippet 2 begin
+		pause formatting
+		<!--
+			</div>
+		</div>
+		-->
+	snippet 2 end
+
 		Welcome to this cozy little homepage!
 		Appisode is a small one-man company that develops all sorts of stuff. From web applications to chess games, from informational sites to mobile apps.
 		As long as it's interactive.
 		<h1>Portfolio</h1>
-		pause formatting
-		<div class="portfolio-item curvy">
-			<img src="portfolio/syminor.jpg" class="portfolio-image" />
-			<div class="portfolio-text">
-			resume formatting
+		snippet 1 insert syminor.jpg
 				This site was built as a travel log for Tjebbe and Pauli Kleijn. They updated it during their world trip.
 				newline
 				Visit the site here: http://syminor.com
-			pause formatting
-			</div>
-		</div>
-		<div class="portfolio-item curvy">
-			<img src="portfolio/difm.png" class="portfolio-image" />
-			<div class="portfolio-text">
-			resume formatting
+		snippet 2 insert
+		snippet 1 insert difm.png
 				My friend Rodrigo needed a website for his desktop player project. It's fast, Ajax-based and also works entirely without Javascript. The entire site was hand-crafted.
 				newline
 				Have a look at http://difm.eu/
-			pause formatting
-			</div>
-		</div>
-		<div class="portfolio-item curvy">
-			<img src="portfolio/tfb.png" class="portfolio-image" />
-			<div class="portfolio-text">
-			resume formatting
+		snippet 2 insert
+		snippet 1 insert tfb.png
 				Trance is my favorite music genre. The Belgian 'Trance Family Belgium', or TFB, asked me if I could make an app for them, with the capability to stream music from their online radio station TFB Radio.
 				newline
-				Find the app here: <a href="play/#tobiass.tfb">TFB Radio</a>
-			pause formatting
-			</div>
-		</div>
-		<div class="portfolio-item curvy">
-			<img src="portfolio/cdance.png" class="portfolio-image" />
-			<div class="portfolio-text">
-			resume formatting
+				Find the app <a href="play/#tobiass.cd" target="_blank">here</a>.
+		snippet 2 insert
+		snippet 1 insert cdance.png
 				C-Dance is an online radio station, just like TFB Radio. This app was made in order for fans to be able to listen to their favorite radio station on the move.
 				newline
-				Find the app here: <a href="play/#tobiass.cd">C-Dance</a>
-			pause formatting
-			</div>
-		</div>
-		resume formatting
+				Find the app <a href="play/#tobiass.cd" target="_blank">here</a>.
+		snippet 2 insert
 		newline
-		<img src="markup/coffee.gif" class="curvy" />
+		<img src="markup/coffee.gif" class="curvy" id="coffee" />
 	</div>
 </body>
 </html>

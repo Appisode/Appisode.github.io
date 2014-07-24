@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Play Redirector</title>
+	<link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css" />
+	<link href="../markup/main.css" rel="stylesheet" type="text/css" />
+	<script>
+	window.onload = function() {
+		if(!location.hash || location.hash.length < 2)
+			document.getElementById('text').innerHTML = 'Invalid link.';
+		else {
+			var url = 'https://play.google.com/store/apps/details?id='+location.hash.substr(1);
+			document.getElementById('link').href = url;
+			location.href = url;
+		}
+	};
+	</script>
+</head>
+<body>
+	<div id="text">
+	You should be redirected to your destination in a second.<br><br>
+	If not, click <a href="#" id="link">here</a>.
+	</div>
+</body>
+</html>

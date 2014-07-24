@@ -1,0 +1,61 @@
+body {
+	background-color: #DBDAE3;
+	margin: 10px;
+	text-align: center;
+}
+
+body * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#text {
+	font-family: Lato, Verdana;
+	font-size: 30px;
+	width: 60%;
+	text-align: center;
+}
+
+#logo {
+	width: 50%;
+	height: auto;
+}
+
+.portfolio-item {
+	text-align: left;
+	width: 50%;
+	background-color: #CCCBD1;
+	opacity: 1;
+	padding: 15px;
+	min-height: 150px;
+	margin-top: 20px;
+}
+
+.portfolio-item:first-child {
+	margin-top: 0;
+}
+
+.portfolio-image {
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+
+.portfolio-text {
+	padding-left: 165px;
+	font-size: 20px;
+}
+
+.curvy {
+	border-radius: 20px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 720px) {
+	#logo {
+		width: 80%;
+	}
+
+	#text {
+		width: 90%;
+	}
+}

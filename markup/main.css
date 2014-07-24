@@ -1,6 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
 body {
-	background-color: #DBDAE3;
-	margin: 10px;
+	background-color: #E6E6DC;
 	text-align: center;
 }
 
@@ -21,14 +22,25 @@ body * {
 	height: auto;
 }
 
+h1 {
+	color: #C86368;
+}
+
 .portfolio-item {
 	text-align: left;
-	width: 50%;
-	background-color: #CCCBD1;
+	background-color: #D6D6CB;
 	opacity: 1;
-	padding: 15px;
+	padding: 30px;
+	padding-left: 25px;
 	min-height: 150px;
-	margin-top: 20px;
+	margin-top: 40px;
+	box-shadow: 0 0 10px 3px rgba(255,255,255,.35);
+	transition: background-color .5s;
+}
+
+.portfolio-item:hover {
+	transition: background-color .5s;
+	background-color: #C9C9C1;
 }
 
 .portfolio-item:first-child {
@@ -38,16 +50,24 @@ body * {
 .portfolio-image {
 	width: 150px;
 	height: 150px;
+	padding-bottom: 15px;
 	float: left;
 }
 
 .portfolio-text {
-	padding-left: 165px;
-	font-size: 20px;
+	padding-left: 173px;
+	font-size: 16px;
+	line-height: 24px;
+	color: black;
+	font-family: Roboto, Verdana;
+}
+
+.portfolio-text a, .portfolio-text a:visited {
+	color: black;
 }
 
 .curvy {
-	border-radius: 20px;
+	border-radius: 10px;
 }
 
 #coffee {
@@ -55,17 +75,17 @@ body * {
 	height: auto;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 720px) {
+@media only screen and (min-width : 320px) and (max-width : 700px) {
 	#logo {
 		width: 80%;
 	}
 
 	#text {
-		width: 90%;
+		width: 80%;
 	}
 
 	.portfolio-item {
-		width: 90%;
+		width: 80%;
 		text-align: center;
 	}
 

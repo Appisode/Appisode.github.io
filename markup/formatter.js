@@ -63,12 +63,14 @@ String.prototype.format = function() {
 			});
 		}
 
-		v = v.replace(/\.\.age\((.+?)\)/, function(match, date) {
+		v = v.replace(/\.\.age\((.+?)\)/g, function(match, date) {
 			var birthday = +new Date(date);
 			var b = ~~((Date.now() - birthday) / (31557600000));
 			return b;
-		})
-		.replace(/\.\.unscramble\((.+?)\)/, function(match, scrambled) {
+		});
+
+
+		v = v.replace(/\.\.unscramble\(([0-9-]+)\)/g, function(match, scrambled) {
 			var str = '';
 			var codes = scrambled.split('-');
 			for(var i = 0; i < codes.length; i++)

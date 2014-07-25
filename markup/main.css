@@ -63,12 +63,12 @@ h1 {
 	font-family: Roboto, Verdana;
 }
 
-.portfolio-text a, .portfolio-text a:visited {
+a, a:visited {
 	transition: color .7s;
 	color: black;
 }
 
-.portfolio-text a:hover {
+a:hover {
 	transition: color .3s;
 	color: #616161;
 }

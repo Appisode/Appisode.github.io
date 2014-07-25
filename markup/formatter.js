@@ -67,6 +67,13 @@ String.prototype.format = function() {
 			var birthday = +new Date(date);
 			var b = ~~((Date.now() - birthday) / (31557600000));
 			return b;
+		})
+		.replace(/\.\.unscramble\((.+?)\)/, function(match, scrambled) {
+			var str = '';
+			var codes = scrambled.split('-');
+			for(var i = 0; i < codes.length; i++)
+				str += String.fromCharCode(codes[i]-i);
+			return str;
 		});
 		
 		if(pause)
@@ -88,4 +95,12 @@ String.prototype.format = function() {
 	});
 
 	return text;
+};
+
+String.prototype.scramble = function() {
+	var codes = [];
+	for(var i = 0; i < this.length; i++) {
+		codes.push(this.charCodeAt(i)+i);
+	}
+	return codes.join('-');
 };

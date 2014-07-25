@@ -54,9 +54,21 @@ String.prototype.format = function() {
 			}
 		}
 
-		v = v.autoLink({
-			target: '_blank'
+		// check for html tags before autolinking
+		var html = v.match(/^[^<>]+$/);
+
+		if(String.prototype.autoLink) {
+			v = v.autoLink({
+				target: '_blank'
+			});
+		}
+
+		v = v.replace(/\.\.age\((.+?)\)/, function(match, date) {
+			var birthday = +new Date(date);
+			var b = ~~((Date.now() - birthday) / (31557600000));
+			return b;
 		});
+		
 		if(pause)
 			text += v;
 		else {
@@ -68,7 +80,7 @@ String.prototype.format = function() {
 				for(var i = 0; i < count; i++)
 					text += '<br>';
 			}
-			else if(v.match(/^[^<>]+$/))
+			else if(html)
 				text += v+'<br>';
 			else
 				text += v;

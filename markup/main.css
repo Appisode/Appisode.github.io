@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300|Lato:300);
 
 body {
 	background-color: #E6E6DC;
@@ -15,6 +15,7 @@ body * {
 	font-size: 30px;
 	width: 60%;
 	text-align: center;
+	display: none;
 }
 
 #logo {
@@ -63,7 +64,13 @@ h1 {
 }
 
 .portfolio-text a, .portfolio-text a:visited {
+	transition: color .7s;
 	color: black;
+}
+
+.portfolio-text a:hover {
+	transition: color .3s;
+	color: #616161;
 }
 
 .curvy {

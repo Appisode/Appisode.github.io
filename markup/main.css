@@ -80,8 +80,29 @@ a:hover {
 }
 
 .coffee {
-	width: 25%;
+	width: 100%;
 	height: auto;
+}
+
+.coffee-wrapper {
+	width: 25%;
+	position: relative;
+}
+
+.coffee-wrapper h4 {
+	display: none;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.coffee-wrapper:hover h4 {
+	display: inline;
+}
+
+.coffee-wrapper:hover img.clickable {
+	opacity: 0.2;
 }
 
 @media only screen and (min-width : 320px) and (max-width : 700px) {

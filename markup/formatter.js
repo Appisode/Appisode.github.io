@@ -1,4 +1,8 @@
 String.prototype.format = function() {
+	function randomInt(e,m) {
+		return e-1+Math.round(1+Math.random()*(m-e));
+	};
+
 	var text = "";
 	var pause = false;
 	var snippet = -1;
@@ -65,17 +69,34 @@ String.prototype.format = function() {
 
 		v = v.replace(/\.\.age\((.+?)\)/g, function(match, date) {
 			var birthday = +new Date(date);
+			if(isNaN(birthday)) {
+				console.error("..age didn't get a valid argument.");
+				return 'error';
+			}
 			var b = ~~((Date.now() - birthday) / (31557600000));
 			return b;
 		});
 
 
-		v = v.replace(/\.\.unscramble\(([0-9-]+)\)/g, function(match, scrambled) {
+		v = v.replace(/\.\.unscramble\(([0-9-]*)\)/g, function(match, scrambled) {
+			if(scrambled.length === 0) {
+				console.error("..unscramble didn't get a valid argument.");
+				return 'error';
+			}
 			var str = '';
 			var codes = scrambled.split('-');
 			for(var i = 0; i < codes.length; i++)
 				str += String.fromCharCode(codes[i]-i);
 			return str;
+		});
+
+		v = v.replace(/\.\.pick\((.*?)\)/g, function(match, args) {
+			if(args.length === 0) {
+				console.error("..pick didn't get enough arguments.");
+				return 'error';
+			}
+			args = args.split('; ');
+			return args[randomInt(0, args.length-1)];
 		});
 		
 		if(pause)

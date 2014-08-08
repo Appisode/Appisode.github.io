@@ -10,6 +10,8 @@ String.prototype.format = function() {
 	var replacements = {};
 	this.split("\n").forEach(function(v) {
 		var v = v.trim();
+		if(v == '<!--' || v == '-->' || v.indexOf('..# ') === 0)
+			return;
 
 		var snippet_cmd = v.match(/^snippet ([0-9]+) ([begin|end|insert]+)(.*?)$/);
 		if(snippet_cmd) {
@@ -33,7 +35,8 @@ String.prototype.format = function() {
 		if(snippet != -1) {
 			if(!snippets[snippet])
 				snippets[snippet] = [];
-			snippets[snippet].push(v.replace('<!--', '').replace('-->', ''));
+			//v = v.replace('<!--', '').replace('-->', '');
+			snippets[snippet].push(v);
 			return;
 		}
 

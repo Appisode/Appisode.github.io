@@ -3,8 +3,10 @@ window.onload = function() {
 	textElement.innerHTML = textElement.innerHTML.format();
 	textElement.style.display = 'block';
 	
-	!function(hash) {
-		location.hash = null;
-		location.hash = hash;
-	}(location.hash);
+	(function(hash) {
+		if(hash) {
+			location.hash = "#";
+			location.hash = hash;
+		}
+	})(location.hash);
 };

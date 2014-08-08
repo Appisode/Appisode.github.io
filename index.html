@@ -13,21 +13,23 @@
 <body>
 	<img id="logo" src="markup/header-logo.png" />
 	<div id="text">
+	<!--
+
+	..# Replaces Google Play link placeholders
 	replace play/# with https://play.google.com/store/apps/details?id=
+
+	..# Portfolio item begin/end snippets
 	snippet 1 begin
 		pause formatting
-		<!--
 		<div class="portfolio-item curvy">
-			<img src="portfolio/{{0}}" class="portfolio-image" />
+			..# <img src="portfolio/{{0}}" class="portfolio-image" />
+			<div class="portfolio-image" style="background-image: url(portfolio/{{0}});"></div>
 			<div class="portfolio-text content-text">
-			-->
 	snippet 1 end
 	snippet 2 begin
 		pause formatting
-		<!--
 			</div>
 		</div>
-		-->
 	snippet 2 end
 
 		Welcome to this cozy little homepage!
@@ -88,6 +90,7 @@
 				newline
 				Visit the site here: http://inspectrumrecords.com
 		snippet 2 insert
+		
 		snippet 1 insert nope_s.png
 				A very basic privacy policy invented by me. It states that no user information is collected. It's free to use.
 				newline
@@ -100,6 +103,7 @@
 					<h4>..pick(A cup's just € 2..; Who doesn't love coffee?; Appreciate my work?)</h4>
 				</a>
 			</div>
+	-->
 	</div>
 </body>
 </html>

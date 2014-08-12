@@ -146,5 +146,5 @@ String.prototype.scramble = function() {
 
 _rating = function(json) {
 	if(json && !json.error)
-		Sizzle('span[data-rating="'+json.package+'"]')[0].innerHTML = 'Average out of '+json.ratingCount+' ratings: <b>'+(Math.round(json.ratingValue*100)/100)+'</b>';
+		Sizzle('span[data-rating="'+json.package+'"]')[0].innerHTML = 'Average out of '+json.ratingCount+' ratings: <b>'+(Math.round(json.ratingValue*100)/100)+'</b> &#9733;';
 }

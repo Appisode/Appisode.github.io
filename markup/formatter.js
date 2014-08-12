@@ -101,6 +101,19 @@ String.prototype.format = function() {
 			args = args.split('; ');
 			return args[randomInt(0, args.length-1)];
 		});
+
+		v = v.replace(/\.\.rating\((.*?)\)/g, function(match, args) {
+			if(args.length === 0) {
+				console.error("..rating didn't get enough arguments.");
+				return 'error';
+			}
+			var head = document.getElementsByTagName('head')[0];
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = 'http://tobiass.nl/play_rating.php?callback=_rating&package='+args;
+			head.appendChild(script);
+			return '<span data-rating="'+args+'"></span>';
+		});
 		
 		if(pause)
 			text += v;
@@ -130,3 +143,8 @@ String.prototype.scramble = function() {
 	}
 	return codes.join('-');
 };
+
+_rating = function(json) {
+	if(json && !json.error)
+		Sizzle('span[data-rating="'+json.package+'"]')[0].innerHTML = 'Average out of '+json.ratingCount+' ratings: <b>'+(Math.round(json.ratingValue*100)/100)+'</b>';
+}

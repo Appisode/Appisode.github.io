@@ -90,7 +90,7 @@ a:hover {
 }
 
 .coffee-wrapper {
-	width: 25%;
+	width: 40%;
 	position: relative;
 }
 
@@ -100,6 +100,7 @@ a:hover {
 	left: 0;
 	position: absolute;
 	width: 100%;
+	font-size: 18px;
 }
 
 .coffee-wrapper:hover h4 {
@@ -132,8 +133,7 @@ a:hover {
 		padding-left: 0;
 	}
 
-	.coffee {
-		width: 60%;
-		height: auto;
+	.coffee-wrapper {
+		width: 45%;
 	}
 }

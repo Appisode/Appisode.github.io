@@ -23,7 +23,7 @@
 	snippet 1 begin
 		pause formatting
 		<div class="portfolio-item curvy">
-			..# <img src="portfolio/{{0}}" class="portfolio-image" />
+			<div class="portfolio-type" style="background-image: url(portfolio/types/{{1}}.png);"></div>
 			<div class="portfolio-image" style="background-image: url(portfolio/{{0}});"></div>
 			<div class="portfolio-text content-text">
 	snippet 1 end
@@ -42,34 +42,29 @@
 		You can contact me via email on ..unscramble(60-98-34-107-118-106-108-68-42-118-107-116-120-129-125-73-132-128-116-124-117-136-86-135-138-136-142-138-138-138-127-136-140-79-133-139-70-99-154-150-138-146-139-158-108-157-160-158-164-160-160-160-149-158-162-101-155-161-118-106-157-123), or on Skype: ..unscramble(116-112-100-108-101-120-52-122-129-125-125-120-109).
 		<h1>Portfolio</h1>
 
-		snippet 1 insert syminor.png
-				This site was built as a travel log for Tjebbe and Pauli Kleijn. They updated it during their world trip.
+		snippet 1 insert torrentz.png; app
+				This app can be used to search for downloadable torrents from the best torrent search engine around: https://torrentz.eu. The app enforces secure connections so privacy it won't be able for other devices in your network to track your activity. There's a special interface for tablets available so more data will be shown on your screen. You can even  bookmark torrents that are synchronized with your online Torrentz account. Downloading torrents can be done on your device with an app like Vuze, or uTorrent.
 				newline
-				Visit the site here: http://syminor.com
+				..rating(tobiass.torrentz)
+				Find the app <a href="play/#tobiass.torrentz" target="_blank">here</a>.
 		snippet 2 insert
 
-		snippet 1 insert tfb.png
+		snippet 1 insert statedebt.png; app
+				StateDebt is a school project that displays the public debt of many countries real-time. The data is obtained from http://nationaldebtclocks.org. It has many handy features, such as conversion to USD, and displaying some additional information about the selected country.
+				newline
+				..rating(tobiass.statedebt)
+				Find the app <a href="play/#tobiass.statedebt" target="_blank">here</a>.
+		snippet 2 insert
+
+		snippet 1 insert tfb.png; app
 				Trance is my favorite music genre. The Belgian 'Trance Family Belgium', or TFB, asked me if I could make an app for them, with the capability to stream music from their online radio station TFB Radio.
 				newline
 				..rating(tobiass.tfb)
 				Find the app <a href="play/#tobiass.tfb" target="_blank">here</a>.
 		snippet 2 insert
 
-		snippet 1 insert difm.png
-				My friend Rodrigo needed a website for his desktop player project. It's fast, Ajax-based and also works entirely without Javascript. The entire site was hand-crafted.
-				newline
-				Have a look at http://difm.eu
-		snippet 2 insert
-
-		snippet 1 insert cdance.png
-				C-Dance is an online radio station, just like TFB Radio. This app was made in order for fans to be able to listen to their favorite radio station on the move.
-				newline
-				..rating(tobiass.cd)
-				Find the app <a href="play/#tobiass.cd" target="_blank">here</a>.
-		snippet 2 insert
-
-		snippet 1 insert classbuddy.png
-				ClassBuddy is one of my pet projects. This app is an essential tool for showing one's schedule at school. My school at least. The app can give you notifications of changes in the schedule, is able of showing you where to go throughout the day and can save your homework attached to a subject on your schedule. At the moment of writing this app has a stunning 4.9 stars on the Play Store out of 29 ratings.
+		snippet 1 insert classbuddy.png; app
+				ClassBuddy is one of my pet projects. This app is an essential tool for showing one's schedule at school. My school at least. The app can give you notifications of changes in the schedule, is able of showing you where to go throughout the day and can save your homework attached to a subject on your schedule.
 				newline
 				Currently only available for students from the Christiaan Huygens College in Eindhoven.
 				newline
@@ -77,35 +72,40 @@
 				Find the app <a href="play/#tobiass.rooster" target="_blank">here</a> (only distributed in the Netherlands and Belgium).
 		snippet 2 insert
 
-		snippet 1 insert statedebt.png
-				StateDebt is a school project that displays the public debt of many countries real-time. The data is obtained from http://nationaldebtclocks.org. It has many handy features, such as conversion to USD, and displaying some additional information about the selected country.
+		snippet 1 insert cdance.png; app
+				C-Dance is an online radio station, just like TFB Radio. This app was made in order for fans to be able to listen to their favorite radio station on the move.
 				newline
-				..rating(tobiass.statedebt)
-				Find the app <a href="play/#tobiass.statedebt" target="_blank">here</a>.
+				..rating(tobiass.cd)
+				Find the app <a href="play/#tobiass.cd" target="_blank">here</a>.
 		snippet 2 insert
 
-		snippet 1 insert torrentz.png
-				This app can be used to search for downloadable torrents from the best torrent search engine around: https://torrentz.eu. The app enforces secure connections so privacy it won't be able for other devices in your network to track your activity. There's a special interface for tablets available so more data will be shown on your screen. You can even  bookmark torrents that are synchronized with your online Torrentz account. Downloading torrents can be done on your device with an app like Vuze, or uTorrent.
+		snippet 1 insert difm.png; web
+				My friend Rodrigo needed a website for his desktop player project. It's fast, Ajax-based and also works entirely without Javascript. The entire site was hand-crafted.
 				newline
-				..rating(tobiass.torrentz)
-				Find the app <a href="play/#tobiass.torrentz" target="_blank">here</a>.
+				Have a look at http://difm.eu
 		snippet 2 insert
 
-		snippet 1 insert inspectrum.png
+		snippet 1 insert inspectrum.png; web
 				Fully hand-crafted site for the Trance music label Inspectrum Recordings. They release music made by underground producers. The site has a linked database structure that links artists with their tracks and the other way around.
 				newline
 				Visit the site here: http://inspectrumrecords.com
 		snippet 2 insert
+
+		snippet 1 insert syminor.png; web
+				This site was built as a travel log for Tjebbe and Pauli Kleijn. They updated it during their world trip.
+				newline
+				Visit the site here: http://syminor.com
+		snippet 2 insert
 		
-		snippet 1 insert audioaddict.png
+		snippet 1 insert audioaddict.png; gadget
 				This nifty little Windows 7 gadget allows users to play audio streams provided by streaming networks using AudioAddict's streaming platform, like Digitally Imported, Sky.fm, and JazzRadio.
 				newline
 				Get it here: http://tobiass.nl/gadget
 				newline
-				Running Windows 8 or newer? No problem, the <a href="http://8gadgetpack.net/" target="_blank">8GadgetPack</a> will help you out.
+				<i>Running Windows 8 or newer? No problem, the <a href="http://8gadgetpack.net/" target="_blank">8GadgetPack</a> will help you out.</i>
 		snippet 2 insert
 
-		snippet 1 insert nope_s.png
+		snippet 1 insert nope_s.png; text
 				A very basic privacy policy invented by me. It simply states that no user information is collected. It's free to use.
 				newline
 				Read here: http://appisode.github.io/nope

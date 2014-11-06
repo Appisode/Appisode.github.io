@@ -10,12 +10,53 @@ body * {
 	margin-right: auto;
 }
 
-#text {
+#text, #commits, #commits-hidden {
 	font-family: Lato, Verdana;
 	font-size: 30px;
 	width: 60%;
 	text-align: center;
+}
+
+#text, #commits {
 	display: none;
+}
+
+#commits {
+	margin-top: 12px;
+}
+
+#commits-unfold {
+	font-size: 18px;
+}
+
+#commits-hidden {
+	font-size: 16px;
+	transition: opacity .5s;
+	opacity: 1;
+}
+#commits-hidden.hidden {
+	display: none;
+	transition: opacity .5s ease;
+	opacity: 0;
+}
+
+#commits-arrow {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-image: url(arrow.png)
+}
+
+.arrow-down {
+	transform: rotate(90deg);
+	transition: transform .5s ease;
+}
+
+.arrow-up {
+	transition: all .5s ease;
+	transform: rotate(-90deg);
 }
 
 #logo {

@@ -119,5 +119,11 @@
 			</div>
 	-->
 	</div>
+
+	<div id="commits">
+		<a href="javascript:void(0);" id="commits-unfold" class="arrow-down">Latest changes <div id="commits-arrow" class="arrow-down"></div></a>
+		<div id="commits-hidden" class="hidden"></div>
+	</div>
+	<script async src="https://api.github.com/repos/appisode/appisode.github.io/commits?callback=_gh_commits"></script>
 </body>
 </html>

@@ -13,17 +13,19 @@ window.onload = function() {
 	var commitsUnfold = document.getElementById('commits-unfold');
 	var commitsArrow = document.getElementById('commits-arrow');
 	var commitsHidden = document.getElementById('commits-hidden');
-	commitsUnfold.onclick = function() {
-		if(commitsArrow.className === 'arrow-down') {
-			commitsArrow.className = 'arrow-up';
-			commitsHidden.className = '';
-			window.scrollTo(0, document.body.scrollHeight);
-		}
-		else if(commitsArrow.className === 'arrow-up') {
-			commitsArrow.className = 'arrow-down';
-			commitsHidden.className = 'hidden';
-		}
-	};
+	if(commitsUnfold) {
+		commitsUnfold.onclick = function() {
+			if(commitsArrow.className === 'arrow-down') {
+				commitsArrow.className = 'arrow-up';
+				commitsHidden.className = '';
+				window.scrollTo(0, document.body.scrollHeight);
+			}
+			else if(commitsArrow.className === 'arrow-up') {
+				commitsArrow.className = 'arrow-down';
+				commitsHidden.className = 'hidden';
+			}
+		};
+	}
 };
 
 window._gh_commits = function(data) {
